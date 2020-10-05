@@ -1,0 +1,59 @@
+.jumbotron {
+    width: 100%;
+    background: url(https://blog.polleverywhere.com/wp-content/uploads/2017/08/BEST-WORD-CLOUD-GEN-BANNER-3.png);
+    background-size: cover;
+    font-family: 'Secular One', sans-serif;
+    text-shadow: 4px 4px 10px rgb(0, 225, 255);
+}
+
+body {
+    background-color: blueviolet;
+}
+
+.searchbttn {
+    height: 39px;
+}
+
+button {
+    background-color: white;
+}
+
+.col-3 {
+    background-color: green;
+    margin: 2% 4% 2% 2%;
+    padding: 1%;
+}
+
+.searchBox {
+    border: solid 6px;
+    height: 48px;
+}
+
+.previousBox {
+    margin: 8% 5% 2% 8%;
+    padding: 5%; 
+    border: solid 3px;
+    height: fit-content;       
+}
+
+.forecastBox {
+    background-color: rgb(63, 76, 194);
+    margin: 2% 2% 2% 4%;
+    padding: 3%;    
+}
+
+button #uvIndex {
+    border-radius: 8px;
+}
+
+.extended {
+    background-color: chartreuse;
+    margin: 5%
+}
+
+#dailyforecast {
+    padding: 2%;
+}
+
+
+
