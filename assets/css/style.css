@@ -4,10 +4,11 @@
     background-size: cover;
     font-family: 'Secular One', sans-serif;
     text-shadow: 4px 4px 10px rgb(0, 225, 255);
+    text-align: center;
 }
 
-body {
-    background-color: blueviolet;
+.display-4 {
+    font-size: 4.5rem;
 }
 
 .searchbttn {
@@ -19,25 +20,25 @@ button {
 }
 
 .col-3 {
-    background-color: green;
+    background-color: rgb(144, 194, 228);
     margin: 2% 4% 2% 2%;
     padding: 1%;
 }
 
 .searchBox {
-    border: solid 6px;
+    border: ridge 5px rgb(90, 86, 86);
     height: 48px;
 }
 
 .previousBox {
     margin: 8% 5% 2% 8%;
     padding: 5%; 
-    border: solid 3px;
+    border: ridge 5px rgb(90, 86, 86);
     height: fit-content;       
 }
 
 .forecastBox {
-    background-color: rgb(63, 76, 194);
+    background-color: rgb(144, 194, 228);
     margin: 2% 2% 2% 4%;
     padding: 3%;    
 }
@@ -47,13 +48,25 @@ button #uvIndex {
 }
 
 .extended {
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     margin: 5%
+}
+
+.col-12 {
+    border: none;
 }
 
 #dailyforecast {
     padding: 2%;
+    background-color: rgb(144, 194, 228);
 }
 
+.list-group-item {
+    cursor: pointer;
+}
 
+/* ::marker {
+    visibility: hidden;
+    opacity: 0%;
+} */
 
