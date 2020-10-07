@@ -31,14 +31,14 @@ function aarayify() {
 function stringify() {
     var city = $("#cityName").val().trim();
     if (city !== "") {
-        console.log("Bro, where you at?");
+        // console.log("Bro, where you at?");
 
         cityList.unshift(city);
-        console.log(cityList)
+        // console.log(cityList)
 
         var cityListStorage = JSON.stringify(cityList);
         if (cityListStorage !== null) {
-            console.log(cityListStorage);
+            // console.log(cityListStorage);
             localStorage.setItem("cities", cityListStorage);
         }
     }
@@ -48,13 +48,13 @@ function renderSearchedCities() {
     $("#cityList").empty();
     $("#cityName").value = "";
 
-    console.log(cityList);
+    // console.log(cityList);
     if (cityList != null) {
-        for (var i = 0; i < cityList.length +1; i++) {
+        for (var i = 0; i <cityList.length; i++) {
             var entry = cityList[i];
             var li = document.createElement("li");
             li.textContent = entry;
-            $("li").attr("class", "list-group-item");
+            $(li).attr("class", "list-group-item");
             li.setAttribute("data-index", i);
             li.onclick = function (event) {
                 event.preventDefault();
@@ -78,11 +78,11 @@ function renderWeather(cityName) {
     var citySearch = cityName;
     var APIkey = "6cba4494ea3720d9f5389a6bf15786ae";
     var startDate = moment().format('M/DD/YYYY');  // Current Date
-    var day1 = moment().add(1, 'days').format('M/DD/YYYY');
-    var day2 = moment().add(2, 'days').format('M/DD/YYYY');
-    var day3 = moment().add(3, 'days').format('M/DD/YYYY');
-    var day4 = moment().add(4, 'days').format('M/DD/YYYY');
-    var day5 = moment().add(5, 'days').format('M/DD/YYYY');
+    var day1 = moment().add(1, 'days').format('M/DD');
+    var day2 = moment().add(2, 'days').format('M/DD');
+    var day3 = moment().add(3, 'days').format('M/DD');
+    var day4 = moment().add(4, 'days').format('M/DD');
+    var day5 = moment().add(5, 'days').format('M/DD');
 
     $("#current").empty();
     $("#extended").empty();
@@ -94,17 +94,17 @@ function renderWeather(cityName) {
 
     // current weather
     var queryURLcurr = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch + "&units=imperial&appid=" + APIkey;
-    console.log("queryUrlcurr");
+    // console.log("queryUrlcurr");
 
     $.ajax({
         url: queryURLcurr,
         method: "GET",
     })
         .then(function (response) {
-            console.log(response);
+            // console.log(response);
 
             var iconUrl = "http://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
-            console.log(iconUrl);
+            // console.log(iconUrl);
             var lat = response.coord.lat;
             var lon = response.coord.lon;     
 
@@ -119,7 +119,7 @@ function renderWeather(cityName) {
 
             // extended forecast
             var queryURLext = "https://api.openweathermap.org/data/2.5/onecall?" + "lat=" + lat + "&lon=" + lon + "&units=imperial" + "&appid=" + APIkey;
-            console.log("extended", queryURLext);
+            // console.log("extended", queryURLext);
 
             $.ajax({
                 url: queryURLext,
@@ -140,16 +140,16 @@ function renderWeather(cityName) {
 
                     // UV Index colors
                     if (response.current.uvi <= 2) {
-                        $("#uvIndex").css("background-color", "green");
-                    }
+                        $("#uvIndex").css("background-color", "blue");
+                    }                    
                     else if (response.current.uvi <= 5) {
-                        $("#uvIndex").css("background-color", "yellow");
+                        $("#uvIndex").css("background-color", "green");
                     } else if (response.current.uvi <= 7) {
-                        $("#uvIndex").css("background-color", "orange");
+                        $("#uvIndex").css("background-color", "yellow");
                     } else if (response.current.uvi <= 10) {
-                        $("#uvIndex").css("background-color", "red");
+                        $("#uvIndex").css("background-color", "orange");
                     } else if (response.current.uvi <= 40) {
-                        $("#uvIndex").css("background-color", "purple");
+                        $("#uvIndex").css("background-color", "red");
                     }
 
                     $("#extended").append(

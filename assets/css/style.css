@@ -7,66 +7,106 @@
     text-align: center;
 }
 
+.col-12 {
+    background: transparent;
+}
+
 .display-4 {
     font-size: 4.5rem;
 }
 
+.card {
+    border: none;
+}
+
 .searchbttn {
-    height: 39px;
+    height: 50px;
+}
+
+.citySearch {
+    height: 50px;
+    font-size: 20px;
+}
+
+.card-header {
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 button {
-    background-color: white;
+    background-color: rgb(0, 68, 255);
+    color: aliceblue;
 }
 
 .col-3 {
     background-color: rgb(144, 194, 228);
     margin: 2% 4% 2% 2%;
-    padding: 1%;
 }
 
 .searchBox {
-    border: ridge 5px rgb(90, 86, 86);
     height: 48px;
+    margin-top: 5%;
 }
 
 .previousBox {
-    margin: 8% 5% 2% 8%;
+    margin: 8% 5% 5% 8%;
     padding: 5%; 
-    border: ridge 5px rgb(90, 86, 86);
+    border: ridge 1px rgb(90, 86, 86);
     height: fit-content;       
 }
 
 .forecastBox {
     background-color: rgb(144, 194, 228);
     margin: 2% 2% 2% 4%;
-    padding: 3%;    
+    padding: 3%;
+    font-size: 20px;  
 }
 
-button #uvIndex {
-    border-radius: 8px;
+.card-body {
+    font-size: 20px;
+    color: azure;
+    padding: 2%;
 }
 
 .extended {
-    /* background-color: chartreuse; */
-    margin: 5%
+    background-color: blue;
+    width: auto;
 }
 
-.col-12 {
-    border: none;
+.col {
+    padding-bottom: 20px;
+}
+
+.card-deck .card {
+    margin-bottom: 20px;
 }
 
 #dailyforecast {
     padding: 2%;
-    background-color: rgb(144, 194, 228);
+    margin: auto;
 }
 
 .list-group-item {
     cursor: pointer;
+    font-size: 25px;
 }
 
-/* ::marker {
-    visibility: hidden;
-    opacity: 0%;
-} */
+#uvIndex {
+    border: none;
+    color: black;
+}
 
+.card-text {
+    font-size: 20px;
+}
+
+li::marker {
+    visibility: hidden;
+}
