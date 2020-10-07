@@ -146,9 +146,9 @@ function renderWeather(cityName) {
                         $("#uvIndex").css("background-color", "green");
                     } else if (response.current.uvi <= 7) {
                         $("#uvIndex").css("background-color", "yellow");
-                    } else if (response.current.uvi <= 10) {
+                    } else if (response.current.uvi <= 8) {
                         $("#uvIndex").css("background-color", "orange");
-                    } else if (response.current.uvi <= 40) {
+                    } else if (response.current.uvi <= 10) {
                         $("#uvIndex").css("background-color", "red");
                     }
 
